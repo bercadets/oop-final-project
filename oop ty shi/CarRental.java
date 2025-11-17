@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// ========================
-// ABSTRACT CLASS (ABSTRACTION)
-// ========================
+// ABSTRACT CLASS
 abstract class Vehicle {
     private String name;
     private double hourlyRate;
@@ -17,7 +15,7 @@ abstract class Vehicle {
 
     public abstract String getType();  // POLYMORPHISM
 
-    // ENCAPSULATION (private fields + getters/setters)
+    // ENCAPSULATION
     public String getName() { return name; }
     public double getHourlyRate() { return hourlyRate; }
     public boolean isRented() { return rented; }
@@ -32,9 +30,7 @@ abstract class Vehicle {
     }
 }
 
-// ========================
 // INHERITANCE
-// ========================
 class Bicycle extends Vehicle {
     public Bicycle(double rate) {
         super("Bicycle", rate);
@@ -59,9 +55,6 @@ class Car extends Vehicle {
     public String getType() { return "Car"; }
 }
 
-// ========================
-// RENTAL SYSTEM
-// ========================
 class RentalSystem {
     private ArrayList<Vehicle> inventory = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
@@ -196,8 +189,13 @@ class RentalSystem {
         v.setRented(false);
         System.out.println("Thank you for returning the " + v.getName() + "!");
     }
+}
 
-    public void menu() {
+public class CarRental {
+    public static void main(String[] args) {
+        RentalSystem system = new RentalSystem();
+        Scanner sc = new Scanner(System.in);
+
         while (true) {
             System.out.println("\n--- Vehicle Rental System ---");
             System.out.println("[1] Rent Vehicle");
@@ -212,28 +210,20 @@ class RentalSystem {
             int choice = sc.nextInt();
 
             switch (choice) {
-                case 1 -> rentVehicle();
-                case 2 -> updatePrice();
-                case 3 -> showInventory();
-                case 4 -> addVehicle();
-                case 5 -> removeVehicle();
-                case 6 -> returnVehicle();
+                case 1 -> system.rentVehicle();
+                case 2 -> system.updatePrice();
+                case 3 -> system.showInventory();
+                case 4 -> system.addVehicle();
+                case 5 -> system.removeVehicle();
+                case 6 -> system.returnVehicle();
                 case 7 -> {
                     System.out.println("Thank you for doing business!");
                     return;
                 }
                 default -> System.out.println("Invalid choice.");
             }
+            sc.close();
         }
     }
 }
 
-// ========================
-// MAIN CLASS
-// ========================
-public class CarRental {
-    public static void main(String[] args) {
-        RentalSystem system = new RentalSystem();
-        system.menu();
-    }
-}
