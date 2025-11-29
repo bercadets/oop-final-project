@@ -54,23 +54,29 @@ Run the program using:
 java VehicleRentalSystem.Main
 ```
 
-## Object-Oriented Principles
+## 👨‍💻 Object-Oriented Principles
 
-- `Python` for programming language
-- `abc` for abstract base classes
-- `os` for cross-platform terminal clearing
+### 💊 Encapsulation
+Encapsulation is implemented by making all fields in the Vehicle class private and providing public getter and setter methods to control access to the vehicle's name, hourly rate, and rental status.
 
+### 🧱 Abstraction
+Abstraction is implemented by declaring the Vehicle class as abstract with an abstract `getType()` method, which forces all subclasses to define their specific vehicle type while hiding the internal implementation details from the user.
+
+
+### 🧬 Inheritance
+Inheritance is demonstrated through the Car and Bicycle classes extending the Vehicle base class, where they inherit common properties like name, hourly rate, and rental status while using the `super()` constructor to set their specific values.
+
+### 👥 Polymorphism
+Polymorphism is achieved through method overriding(`@Override`), where both Car and Bicycle classes provide their own specific implementation of the `getType()` method that was defined in the parent Vehicle class.
+
+## Example Output
 
 
 ## 🌸 Acknowledgement
 
-We would like to express our heartfelt gratitude to those who helped bring this project to life. 
+We would like to extend our sincere gratitude to everyone who supported us in the completion of this project.
 
-First and foremost, a sincere thank you to our instructor, Ms. Fatima Marie P. Agdon, MSCS, whose thoughtful guidance and invaluable insights were essential in shaping this work. Your support has been truly appreciated.
-
-We’d also like to thank our amazing teammates for their hard work, and dedication throughout this project. It’s been a great experience working together, and we couldn’t have done it without each other.
-
-This project would not have been possible without all of you.
+Our deepest thanks go to our instructor, Mr. Emmanuel Charlie Enriquez, for his invaluable guidance, expert insights, and unwavering patience throughout this process. Your mentorship has been instrumental in shaping our work and deepening our understanding.
 
 — *The Team* ✨
 
@@ -81,6 +87,5 @@ This project would not have been possible without all of you.
 | Members                         | Github Profile                                             |
 | ------------------------------- | ---------------------------------------------------------- |
 | **Baes, Gian Louie D.**         | [@HaiseSasaki23](https://github.com/HaiseSasaki23)         |
-| **Limboc, Nikki C.**            | [@nikkibuttowsk](https://github.com/nikkibuttowsk)         |
-| **Mendoza, Lance Kert O.**      | [@sleepingPotato17](https://github.com/sleepingPotato17)   |
-| **Pura, Fatima A.**             | [@st-f4tima](https://github.com/st-f4tima)                 |
+| **Davalos, Nicko Bryan J.**     | [@bercadets](https://github.com/bercadets)                 |
+| **Mayuga, Nash D.**             | [@shany20](https://github.com/shany20)                     |
